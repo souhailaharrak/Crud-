@@ -14,11 +14,16 @@
 <body>
 
     <h1 class="text-center">register de la Promotion</h1>
+       
+           <?php
+            include "model/conexion.php";
+            include "contrôleur/delet.php";
+           
+           ?>
+ 
     <div class="container-fluid row">
         <form class="col-4" method="POST">
             <?php
-
-            include "model/conexion.php";
             include "contrôleur/regesteoPromo.php";
 
             ?>
@@ -53,7 +58,7 @@
 
                             <td>
                                 <a href="edite.php?id=<?= $data->id ?>" class="btn btn-small btn-warning"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>
-                                <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+                                <a href="index.php?id=<?= $data->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
 
                             </td>
                         </tr>
